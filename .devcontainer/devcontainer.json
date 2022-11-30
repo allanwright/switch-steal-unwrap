@@ -12,7 +12,9 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"dbaeumer.vscode-eslint",
-				"octref.vetur"
+				"octref.vetur",
+				"Vue.vscode-typescript-vue-plugin",
+				"Vue.volar"
 			]
 		}
 	},

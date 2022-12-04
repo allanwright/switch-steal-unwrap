@@ -4,9 +4,8 @@ import IconPlus from "@/components/icons/IconPlus.vue";
 
 <template>
   <div>
-    <label>Name:</label>
-    <input type="text" />
-    <button type="button">Add Player</button>
+    <div>Add Player</div>
+    <input type="text" title="Name" placeholder="Name" />
     <IconPlus />
   </div>
 </template>

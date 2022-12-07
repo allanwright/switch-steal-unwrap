@@ -30,4 +30,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'ap-southeast-2'
       - name: Upload to S3 bucket
-      - run: aws s3 sync ./dist s3://websitestack-website333b7473-1274j43o8sind --delete
+        run: aws s3 sync ./dist s3://websitestack-website333b7473-1274j43o8sind --delete

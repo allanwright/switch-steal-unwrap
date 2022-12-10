@@ -2,6 +2,16 @@ import { defineStore } from "pinia";
 
 class Action {
   id: number;
+  description: string;
+
+  constructor(id: number, description: string) {
+    this.id = id;
+    this.description = description;
+  }
+}
+
+class Player {
+  id: number;
   name: string;
 
   constructor(id: number, name: string) {
@@ -12,7 +22,6 @@ class Action {
 
 export const useGameStore = defineStore("gameStore", {
   state: () => ({
-    players: [] as string[],
     // TODO: The wording of these actions is pretty average, make them better
     // TODO: What does action 1 even mean?
     // TODO: Actions 6 and 8 are a gender disaster, fix them
@@ -31,10 +40,12 @@ export const useGameStore = defineStore("gameStore", {
       new Action(11, "Trade gifts with anyone wearing green"),
       new Action(12, "Trade gifts with the person on your left"),
     ] as Action[],
+    players: [] as Player[],
+    playerCounter: 0 as number,
   }),
   actions: {
     addPlayer(name: string) {
-      this.players.push(name);
+      this.players.push(new Player(++this.playerCounter, name));
     },
   },
 });

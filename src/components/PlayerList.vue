@@ -1,6 +1,8 @@
 <template>
   <ul>
-    <li v-for="player in players" v-bind:key="player">{{ player }}</li>
+    <li v-for="player in players" v-bind:key="player.id">
+      {{ player.id }} {{ player.name }}
+    </li>
   </ul>
 </template>
 

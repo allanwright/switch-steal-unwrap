@@ -15,13 +15,8 @@ export default defineComponent({
   setup() {
     const gameStore = useGameStore();
 
-    const testMe = (name: string) => {
-      gameStore.addPlayer(name);
-    };
-
     return {
-      playerStore: gameStore,
-      testMe,
+      gameStore,
     };
   },
   components: {
@@ -34,7 +29,8 @@ export default defineComponent({
   },
   methods: {
     addPlayer: function () {
-      this.testMe(this.name);
+      this.gameStore.addPlayer(this.name);
+      this.name = "";
     },
   },
 });

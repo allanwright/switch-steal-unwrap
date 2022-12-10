@@ -8,19 +8,19 @@
 
 <script lang="ts">
 import IconPlus from "@/components/icons/IconPlus.vue";
-import { usePlayerStore } from "@/stores/players";
+import { useGameStore } from "@/stores/game";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    const playerStore = usePlayerStore();
+    const gameStore = useGameStore();
 
     const testMe = (name: string) => {
-      playerStore.addPlayer(name);
+      gameStore.addPlayer(name);
     };
 
     return {
-      playerStore,
+      playerStore: gameStore,
       testMe,
     };
   },

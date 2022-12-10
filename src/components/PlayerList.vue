@@ -6,13 +6,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { usePlayerStore } from "@/stores/players";
+import { useGameStore } from "@/stores/game";
 
 export default defineComponent({
   setup() {
-    const playerStore = usePlayerStore();
+    const gameStore = useGameStore();
 
-    const players = playerStore.players;
+    const players = gameStore.players;
 
     return {
       players,

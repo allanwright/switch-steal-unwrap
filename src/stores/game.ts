@@ -47,5 +47,15 @@ export const useGameStore = defineStore("gameStore", {
     addPlayer(name: string) {
       this.players.push(new Player(++this.playerCounter, name));
     },
+    // TODO: Refactor to expect Player instance instead of just id
+    deletePlayer(id: number) {
+      const player = this.players.find(i => i.id == id);
+      if (player === undefined) {
+        return;
+      }
+      
+      const index = this.players.indexOf(player);
+      this.players.splice(index, 1);
+    }
   },
 });

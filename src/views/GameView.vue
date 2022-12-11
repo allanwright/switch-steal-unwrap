@@ -1,6 +1,12 @@
+<script setup lang="ts">
+import TurnButton from "@/components/TurnButton.vue";
+import TurnAction from "@/components/TurnAction.vue";
+</script>
+
 <template>
   <div class="about">
-    <h1>Hello Game</h1>
+    <TurnButton />
+    <TurnAction />
   </div>
 </template>
 

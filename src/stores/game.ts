@@ -23,11 +23,10 @@ class Player {
 export const useGameStore = defineStore("gameStore", {
   state: () => ({
     // TODO: The wording of these actions is pretty average, make them better
-    // TODO: What does action 1 even mean?
     // TODO: Actions 6 and 8 are a gender disaster, fix them
     /* eslint-disable prettier/prettier */
     actions: [
-      new Action(1, ""),
+      new Action(1, "Make somebody else unwrap their gift"),
       new Action(2, "Exchange with anyone or keep your gift"),
       new Action(3, "Trade gifts with anyone wearing red"),
       new Action(4, "Trade gifts with the person on your right"),
@@ -42,6 +41,9 @@ export const useGameStore = defineStore("gameStore", {
     ] as Action[],
     players: [] as Player[],
     playerCounter: 0 as number,
+    currentPlayer: undefined as Player | undefined,
+    currentAction: undefined as Action | undefined,
+    nextPlayer: undefined as Player | undefined,
   }),
   actions: {
     addPlayer(name: string) {

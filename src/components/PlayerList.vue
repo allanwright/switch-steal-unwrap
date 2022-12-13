@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import type Player from "@/models/Player";
+import PlayerItem from "./PlayerItem.vue";
+
+defineProps<{
+  players: Player[];
+}>();
+</script>
+
 <template>
   <ul>
     <PlayerItem
@@ -8,24 +17,3 @@
     />
   </ul>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import { useGameStore } from "@/stores/game";
-import PlayerItem from "@/components/PlayerItem.vue";
-
-export default defineComponent({
-  setup() {
-    const gameStore = useGameStore();
-
-    const players = gameStore.players;
-
-    return {
-      players,
-    };
-  },
-  components: {
-    PlayerItem,
-  },
-});
-</script>

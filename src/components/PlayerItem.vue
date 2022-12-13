@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useGameStore } from "@/stores/game";
 import IconTrash from "@/components/icons/IconTrash.vue";
+import PlayerService from "@/services/playerService";
 
 const props = defineProps<{
   id: number;
   name: string;
 }>();
 
-const gameStore = useGameStore();
+const playerService = new PlayerService();
 
 const deletePlayer = function () {
-  gameStore.deletePlayer(props.id);
+  playerService.deletePlayer(props.id);
 };
 </script>
 

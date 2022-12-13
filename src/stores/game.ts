@@ -1,24 +1,6 @@
 import { defineStore } from "pinia";
-
-class Action {
-  id: number;
-  description: string;
-
-  constructor(id: number, description: string) {
-    this.id = id;
-    this.description = description;
-  }
-}
-
-class Player {
-  id: number;
-  name: string;
-
-  constructor(id: number, name: string) {
-    this.id = id;
-    this.name = name;
-  }
-}
+import Action from "@/models/Action";
+import type Player from "@/models/Player";
 
 export const useGameStore = defineStore("gameStore", {
   state: () => ({
@@ -38,24 +20,8 @@ export const useGameStore = defineStore("gameStore", {
       new Action(12, "Swap your gift with the person on your left"),
     ] as Action[],
     players: [] as Player[],
-    playerCounter: 0 as number,
     currentPlayer: undefined as Player | undefined,
     currentAction: undefined as Action | undefined,
     nextPlayer: undefined as Player | undefined,
   }),
-  actions: {
-    addPlayer(name: string) {
-      this.players.push(new Player(++this.playerCounter, name));
-    },
-    // TODO: Refactor to expect Player instance instead of just id
-    deletePlayer(id: number) {
-      const player = this.players.find(i => i.id == id);
-      if (player === undefined) {
-        return;
-      }
-      
-      const index = this.players.indexOf(player);
-      this.players.splice(index, 1);
-    }
-  },
 });

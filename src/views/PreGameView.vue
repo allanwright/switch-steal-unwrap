@@ -1,19 +1,14 @@
 <script setup lang="ts">
-import PlayerSetup from "@/components/PlayerSetup.vue";
+import PlayerList from "@/components/PlayerList.vue";
 import GameService from "@/services/gameService";
-import PlayerService from "@/services/playerService";
 
 const gameService = new GameService();
-const playerService = new PlayerService();
-const setup = function () {
-  gameService.setupGame(playerService.getPlayers());
-};
 </script>
 
 <template>
   <main>
-    <PlayerSetup />
-    <RouterLink to="/pregame" @click="setup()">Play</RouterLink>
+    <PlayerList :players="gameService.getPlayers()" />
+    <RouterLink to="/game">Start Game</RouterLink>
   </main>
 </template>
 

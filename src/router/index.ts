@@ -10,6 +10,17 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/pregame",
+      name: "pregame",
+      // route level code-splitting
+      // this generates a separate chunk (Game.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/PreGameView.vue"),
+      meta: {
+        transition: "fade",
+      },
+    },
+    {
       path: "/game",
       name: "game",
       // route level code-splitting

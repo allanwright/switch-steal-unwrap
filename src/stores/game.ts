@@ -20,6 +20,7 @@ export const useGameStore = defineStore("gameStore", {
       new Action(12, "Swap your gift with the person on your left"),
     ] as Action[],
     players: [] as Player[],
+    gameMaster: undefined as Player | undefined,
     currentPlayer: undefined as Player | undefined,
     currentAction: undefined as Action | undefined,
     nextPlayer: undefined as Player | undefined,

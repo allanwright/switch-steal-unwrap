@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { useGameStore } from "@/stores/game";
+import GameService from "@/services/gameService";
 
-const gameStore = useGameStore();
+const gameService = new GameService();
 </script>
 
 <template>
-  <div>{{ gameStore.currentAction?.description }}</div>
+  <div v-if="gameService.getCurrentAction() !== undefined">
+    {{ gameService.getCurrentPlayer()?.name }},
+    {{ gameService.getCurrentAction()?.description }}.
+  </div>
 </template>

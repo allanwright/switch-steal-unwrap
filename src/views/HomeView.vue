@@ -13,11 +13,19 @@ const setup = function () {
 <template>
   <main>
     <PlayerSetup />
-    <RouterLink to="/pregame" @click="setup()">Play</RouterLink>
+    <footer class="center">
+      <RouterLink to="/pregame" @click="setup()">Play</RouterLink>
+    </footer>
   </main>
 </template>
 
 <style scoped>
+footer {
+  bottom: 10px;
+  position: fixed;
+  width: 100%;
+}
+
 a {
   background-color: var(--colour-primary-back);
   border-radius: 5px;
@@ -25,6 +33,7 @@ a {
   display: block;
   font-size: x-large;
   line-height: 60px;
+  margin: auto;
   text-align: center;
   width: 150px;
 }

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import IconPlus from "@/components/icons/IconPlus.vue";
 import PlayerService from "@/services/playerService";
 
 const playerService = new PlayerService();
@@ -12,15 +11,21 @@ const name = ref("");
 </script>
 
 <template>
-  <div class="group">
-    <input type="text" title="Name" placeholder="Name" v-model="name" />
-    <div class="button" @click="addPlayer()">Add Player</div>
+  <div class="center">
+    <div class="group">
+      <input type="text" title="Name" placeholder="Name" v-model="name" />
+      <div class="button" @click="addPlayer()">Add Player</div>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.center {
+  text-align: center;
+}
+
 .group {
-  display: flex;
+  display: inline-flex;
   height: 35px;
 }
 

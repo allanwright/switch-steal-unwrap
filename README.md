@@ -1,6 +1,14 @@
 # switch-steal-unwrap
 The switch, steal or unwrap gift exchange game, implemented as a Vue SPA.
 
+## TODO
+* Set max scale = 1 to prevent auto zoom on input focus
+* Finish home view UI styling
+* Create re-usable button component
+* Work on pre-game view UI styling
+* Add end game button to game view
+* Rewrite this readme
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

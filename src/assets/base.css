@@ -42,5 +42,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0px;
+  overflow-y: hidden;
   padding: 0px;
 }

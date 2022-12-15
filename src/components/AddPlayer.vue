@@ -13,7 +13,13 @@ const name = ref("");
 <template>
   <div class="center">
     <div class="group">
-      <input type="text" title="Name" placeholder="Name" v-model="name" />
+      <input
+        type="text"
+        title="Name"
+        placeholder="Name"
+        v-model="name"
+        autocomplete="false"
+      />
       <div class="button" @click="addPlayer()">Add Player</div>
     </div>
   </div>

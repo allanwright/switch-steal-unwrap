@@ -2,10 +2,8 @@
 The switch, steal or unwrap gift exchange game, implemented as a Vue SPA.
 
 ## TODO
-* Set max scale = 1 to prevent auto zoom on input focus
-* Finish home view UI styling
-* Create re-usable button component
-* Work on pre-game view UI styling
+* Remove pre game view and go straight to game view
+* Completely style game view
 * Add end game button to game view
 * Rewrite this readme
 

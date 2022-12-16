@@ -38,6 +38,7 @@ const name = ref("");
 input {
   border-radius: 10px 0 0 10px;
   border-style: none;
+  font-size: 16px;
   text-indent: 10px;
 }
 

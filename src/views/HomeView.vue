@@ -21,7 +21,7 @@ const setup = function () {
 
 <style scoped>
 footer {
-  bottom: 10px;
+  bottom: 20px;
   position: fixed;
   max-width: 1280px;
   width: 100%;

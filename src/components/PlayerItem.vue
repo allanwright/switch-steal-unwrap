@@ -29,7 +29,7 @@ li {
   border-width: 1px;
   margin: 5px auto 5px auto;
   padding: 5px 0 5px 0;
-  width: 269px;
+  width: 295px;
 }
 
 svg {

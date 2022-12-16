@@ -14,7 +14,7 @@ const setup = function () {
   <main>
     <PlayerSetup />
     <footer class="center">
-      <RouterLink to="/pregame" @click="setup()">Play</RouterLink>
+      <RouterLink to="/game" @click="setup()">Play</RouterLink>
     </footer>
   </main>
 </template>

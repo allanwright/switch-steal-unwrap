@@ -4,7 +4,7 @@ import { RouterView } from "vue-router";
 
 <template>
   <header>
-    <img src="@/assets/logo.png" alt="Gifthief Logo" class="logo" />
+    <img src="@/assets/logo.png" alt="Stealy Logo" class="logo" />
   </header>
   <router-view v-slot="{ Component, route }">
     <transition :name="route.meta.transition" mode="out-in">

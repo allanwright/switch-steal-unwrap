@@ -34,5 +34,9 @@ const playTurn = function () {
 
 .transition {
   transition: transform 2s ease-in-out;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+
 }
 </style>

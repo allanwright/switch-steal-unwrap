@@ -6,9 +6,9 @@ import CheatButton from "@/components/CheatButton.vue";
 
 <template>
   <div class="about">
+    <CheatButton />
     <TurnButton />
     <TurnAction />
-    <CheatButton />
   </div>
 </template>
 

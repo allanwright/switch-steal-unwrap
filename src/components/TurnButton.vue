@@ -29,7 +29,18 @@ const playTurn = function () {
 
 <style scoped>
 .container {
+  position: fixed;
+  left: 50%;
   text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  border-color: var(--colour-1);
+  border-radius: 67px;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .transition {

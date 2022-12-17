@@ -12,6 +12,9 @@ const setup = function () {
 
 <template>
   <main>
+    <header>
+      <img src="@/assets/logo.png" alt="Stealy Logo" class="logo" />
+    </header>
     <PlayerSetup />
     <footer class="center">
       <RouterLink to="/game" @click="setup()">Play</RouterLink>
@@ -37,5 +40,10 @@ a {
   margin: auto;
   text-align: center;
   width: 150px;
+}
+
+.logo {
+  display: block;
+  margin: auto;
 }
 </style>

@@ -5,6 +5,11 @@ import GameService from "@/services/gameService";
 const gameService = new GameService();
 let rotation = ref(0);
 const playTurn = function () {
+  gameService.setCalculatingAction(true);
+  setTimeout(() => {
+    gameService.setCalculatingAction(false);
+  }, 2000);
+
   const rotationAmount = 1080;
   if (rotation.value > 0) {
     rotation.value -= rotationAmount;
@@ -48,6 +53,5 @@ img {
   -webkit-transition-property: transform;
   -webkit-transition-duration: 2s;
   -webkit-transition-timing-function: ease-in-out;
-
 }
 </style>

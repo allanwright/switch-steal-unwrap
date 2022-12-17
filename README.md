@@ -2,10 +2,10 @@
 The switch, steal or unwrap gift exchange game, implemented as a Vue SPA.
 
 ## TODO
-* Remove pre game view and go straight to game view
-* Completely style game view
-* Add end game button to game view
+* Add home button to game view
 * Rewrite this readme
+* Make cheat button invisible and only when not calculating action
+* Check doc comments for all services
 
 ## Recommended IDE Setup
 

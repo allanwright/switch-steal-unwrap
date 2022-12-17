@@ -35,6 +35,14 @@ export default class GameService {
     return this._gameStore.currentAction;
   }
 
+  getCalculatingAction() {
+    return this._gameStore.calculatingAction;
+  }
+
+  setCalculatingAction(calculatingAction: boolean) {
+    this._gameStore.calculatingAction = calculatingAction;
+  }
+
   /**
    * Sorts players and sets up initial game state.
    * @param unsortedPlayers An unsorted list of players.

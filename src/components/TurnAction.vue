@@ -5,7 +5,7 @@ const gameService = new GameService();
 </script>
 
 <template>
-  <div v-if="!gameService.isCalculatingAction()" class="container">
+  <div v-if="!gameService.getCalculatingAction()" class="container">
     <div v-if="gameService.getCurrentAction() === undefined">
       <span class="player"> {{ gameService.getNextPlayer()?.name }}</span>, touch the present to start playing.
     </div>

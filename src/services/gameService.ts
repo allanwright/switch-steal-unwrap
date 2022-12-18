@@ -7,6 +7,9 @@ import { useGameStore } from "@/stores/game";
 export default class GameService {
   private _gameStore;
 
+  /**
+   * Initializes a new instance of the GameService object.
+   */
   constructor() {
     this._gameStore = useGameStore();
   }
@@ -27,18 +30,34 @@ export default class GameService {
     return this._gameStore.currentPlayer;
   }
 
+  /**
+   * Gets the next player.
+   * @returns The next player.
+   */
   getNextPlayer() {
     return this._gameStore.nextPlayer;
   }
 
+  /**
+   * Gets the current action.
+   * @returns The current action.
+   */
   getCurrentAction() {
     return this._gameStore.currentAction;
   }
 
+  /**
+   * Gets a value indicating if the the current action is being calculated.
+   * @returns True if the current action is being calculated, otherwise false.
+   */
   getCalculatingAction() {
     return this._gameStore.calculatingAction;
   }
 
+  /**
+   * Sets a value indicating if the current action is being calculated.
+   * @param calculatingAction A value indicating if the current action is being calculated.
+   */
   setCalculatingAction(calculatingAction: boolean) {
     this._gameStore.calculatingAction = calculatingAction;
   }
@@ -109,6 +128,9 @@ export default class GameService {
     this._gameStore.currentAction = this._gameStore.actions[actionIndex];
   }
 
+  /**
+   * Progresses the current players turn by producing a fixed outcome.
+   */
   cheat() {
     this._gameStore.currentAction = this._gameStore.actions[1];
   }

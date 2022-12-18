@@ -9,7 +9,14 @@ const cheat = function () {
 </script>
 
 <template>
-  <button v-if="gameService.isGameMastersTurn()" @click="cheat()" type="button">
-    Cheat
-  </button>
+  <div v-if="gameService.isGameMastersTurn()" @click="cheat()"></div>
 </template>
+
+<style scoped>
+div {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+</style>

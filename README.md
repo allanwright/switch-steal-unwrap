@@ -1,32 +1,13 @@
-# switch-steal-unwrap
-The switch, steal or unwrap gift exchange game, implemented as a Vue SPA.
+## Introduction
+This repo is a Vue SPA implementation of the gift exchange game known as 'switch, steal or unwrap'. It is a secret santa game where traditionally, players roll a dice to determine what action should be taken. This implementation attempts to offer not much more than this basic premise, leaving any other specific rules, like when to end the game, up to 'house rules'.
 
-## TODO
-* Add home button to game view
-* Rewrite this readme
-* Make cheat button visible only when not calculating action
-* Make cheat button look like taking a normal turn
+## Development Environment
+A devcontainer configuration file has been defined for use with [VSCode](https://code.visualstudio.com/). This configuration file also includes the list of recommended extensions. The following is a list of common commands that are useful when interacting with the project.
 
-## Recommended IDE Setup
+## Build and Deployment
+The project is compiled for production using Github Actions and uploaded to an AWS S3 bucket, which is the origin for a Cloudfront Distribution serving requests for [stealy.link](https://stealy.link). More information about the cloud infrastructure can be found in the [switch-steal-unwrap-infrastructure](https://github.com/allanwright/switch-steal-unwrap-infrastructure) project.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+### Project Setup
 
 ```sh
 npm install
@@ -36,16 +17,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

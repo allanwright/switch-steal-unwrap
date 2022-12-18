@@ -22,11 +22,13 @@ const gameService = new GameService();
 
 <style scoped>
 .container {
-  font-size: 18px;
-  position: fixed;
-  top: 75%;
+  font-size: 20px;
   padding: 0 20px 0 20px;
+  position: fixed;
+  text-align: center;
+  top: 75%;
 }
+
 .player {
   color: var(--colour-1);
   text-transform: capitalize;

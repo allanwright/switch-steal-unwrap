@@ -15,8 +15,6 @@ const cheat = function () {
 <style scoped>
 div {
   height: 100px;
-  position: fixed;
-  top: 0;
   width: 100%;
 }
 </style>

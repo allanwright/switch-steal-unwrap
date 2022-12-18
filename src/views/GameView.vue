@@ -2,10 +2,14 @@
 import TurnButton from "@/components/TurnButton.vue";
 import TurnAction from "@/components/TurnAction.vue";
 import CheatButton from "@/components/CheatButton.vue";
+import IconHouse from "@/components/icons/IconHouse.vue";
 </script>
 
 <template>
-  <div class="about">
+  <div>
+    <RouterLink to="/" class="home">
+      <IconHouse />
+    </RouterLink>
     <CheatButton />
     <TurnButton />
     <TurnAction />
@@ -13,11 +17,8 @@ import CheatButton from "@/components/CheatButton.vue";
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+.home {
+  display: block;
+  margin: 10px 10px 10px 10px;
 }
 </style>

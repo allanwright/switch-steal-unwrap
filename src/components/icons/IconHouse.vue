@@ -1,5 +1,5 @@
 <template>
-  <FontAwesomeIcon icon="plus" size="xl" />
+  <FontAwesomeIcon icon="house" size="xl" />
 </template>
 
 <style scoped>

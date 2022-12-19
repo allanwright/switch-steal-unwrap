@@ -6,8 +6,8 @@ export const useGameStore = defineStore("gameStore", {
   state: () => ({
     /* eslint-disable prettier/prettier */
     actions: [
-      new Action(1, "make somebody else unwrap their gift"),
-      new Action(2, "keep your gift or swap it with someone else of your choice"),
+      new Action(1, "keep your gift or swap it with someone else of your choice"),
+      new Action(2, "make somebody else unwrap their gift"),      
       new Action(3, "swap your gift with someone wearing red"),
       new Action(4, "swap your gift with the person on your right"),
       new Action(5, "everyone pass their gift once to the right"),

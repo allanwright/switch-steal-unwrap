@@ -124,7 +124,7 @@ export default class GameService {
       this._gameStore.nextAction = undefined;
     } else {
       actionIndex = Math.round(
-        Math.random() * (this._gameStore.actions.length - 1)
+        Math.random() * this._gameStore.actions.length + 1
       );
     }
 

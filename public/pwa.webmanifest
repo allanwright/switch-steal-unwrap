@@ -8,6 +8,6 @@
    }
   ],
   "start_url": "/",
-  "display": "standalone",
+  "display": "fullscreen",
   "id": "switch-steal-unwrap"
 }

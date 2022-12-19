@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TurnButton from "@/components/TurnButton.vue";
 import TurnAction from "@/components/TurnAction.vue";
-import CheatButton from "@/components/CheatButton.vue";
+import ActionSelectionButton from "@/components/ActionSelectionButton.vue";
 import IconHouse from "@/components/icons/IconHouse.vue";
 </script>
 
@@ -10,7 +10,7 @@ import IconHouse from "@/components/icons/IconHouse.vue";
     <RouterLink to="/" class="home">
       <IconHouse />
     </RouterLink>
-    <CheatButton />
+    <ActionSelectionButton />
     <TurnButton />
     <TurnAction />
   </div>

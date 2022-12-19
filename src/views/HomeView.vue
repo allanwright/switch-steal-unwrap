@@ -26,7 +26,6 @@ const setup = function () {
 footer {
   bottom: 20px;
   position: fixed;
-  max-width: 1280px;
   width: 100%;
 }
 

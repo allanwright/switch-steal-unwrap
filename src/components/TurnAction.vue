@@ -27,6 +27,7 @@ const gameService = new GameService();
   position: fixed;
   text-align: center;
   top: 75%;
+  width: 100%;
 }
 
 .player {

@@ -3,8 +3,7 @@ import GameService from "@/services/gameService";
 
 const gameService = new GameService();
 const cheat = function () {
-  gameService.playTurn();
-  gameService.cheat();
+  gameService.setNextAction();
 };
 </script>
 

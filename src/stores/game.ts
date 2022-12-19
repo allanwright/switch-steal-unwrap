@@ -24,6 +24,7 @@ export const useGameStore = defineStore("gameStore", {
     currentPlayer: undefined as Player | undefined,
     currentAction: undefined as Action | undefined,
     nextPlayer: undefined as Player | undefined,
+    nextAction: undefined as Action | undefined,
     calculatingAction: false as Boolean
   }),
 });

@@ -1,3 +1,4 @@
+import Action from "@/models/Action";
 import Player from "@/models/Player";
 import { useGameStore } from "@/stores/game";
 
@@ -111,28 +112,39 @@ export default class GameService {
       );
 
       this._gameStore.currentPlayer =
-        this._gameStore.players[
-          this.getNextIndex(this._gameStore.players, currentIndex)
-        ];
+        players[this.getNextIndex(this._gameStore.players, currentIndex)];
 
       this._gameStore.nextPlayer =
-        this._gameStore.players[
-          this.getNextIndex(this._gameStore.players, nextIndex)
-        ];
+        players[this.getNextIndex(this._gameStore.players, nextIndex)];
     }
 
-    const actionIndex = Math.round(
-      Math.random() * (this._gameStore.actions.length - 1)
-    );
+    let actionIndex: number;
+    if (this._gameStore.nextAction !== undefined) {
+      actionIndex = this._gameStore.actions.indexOf(this._gameStore.nextAction);
+      this._gameStore.nextAction = undefined;
+    } else {
+      actionIndex = Math.round(
+        Math.random() * (this._gameStore.actions.length - 1)
+      );
+    }
 
     this._gameStore.currentAction = this._gameStore.actions[actionIndex];
   }
 
   /**
-   * Progresses the current players turn by producing a fixed outcome.
+   * Increments the next action from the list of all possible actions.
    */
-  cheat() {
-    this._gameStore.currentAction = this._gameStore.actions[1];
+  setNextAction() {
+    const actions = this._gameStore.actions;
+    if (this._gameStore.nextAction === undefined) {
+      this._gameStore.nextAction = actions[0];
+    } else {
+      const currentIndex = actions.indexOf(
+        this._gameStore.nextAction ?? new Action(0, "")
+      );
+      this._gameStore.nextAction =
+        actions[this.getNextIndex(actions, currentIndex)];
+    }
   }
 
   private getNextIndex<T>(items: T[], index: number) {

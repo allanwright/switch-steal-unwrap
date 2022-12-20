@@ -10,7 +10,7 @@ const gameService = new GameService();
 
 <template>
   <div>
-    <a v-if="gameService.isGameMastersTurn()" href="/" class="home">
+    <a v-if="gameService.isFirstPlayersTurn()" href="/" class="home">
       <IconFlag />
     </a>
     <ActionSelectionButton />

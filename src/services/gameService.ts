@@ -91,6 +91,18 @@ export default class GameService {
   }
 
   /**
+   * Gets a value indicating if it is currently the first player's turn.
+   * @returns True if it is the first player's turn, otherwise false.
+   */
+  isFirstPlayersTurn() {
+    return (
+      this._gameStore.players.indexOf(
+        this._gameStore.nextPlayer ?? new Player(0, "")
+      ) === 0
+    );
+  }
+
+  /**
    * Gets a value indicating if it is currently the game master's turn.
    * @returns True if it is the game master's turn, otherwise false.
    */

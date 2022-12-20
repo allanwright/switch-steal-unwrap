@@ -5,7 +5,11 @@ import App from "./App.vue";
 import router from "./router";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faHouse, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHouse,
+  faTrash,
+  faFlagCheckered,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "./assets/main.css";
 
@@ -16,6 +20,7 @@ app.use(router);
 
 library.add(faHouse);
 library.add(faTrash);
+library.add(faFlagCheckered);
 app.component("FontAwesomeIcon", FontAwesomeIcon);
 
 app.mount("#app");

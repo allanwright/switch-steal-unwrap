@@ -2,14 +2,17 @@
 import TurnButton from "@/components/TurnButton.vue";
 import TurnAction from "@/components/TurnAction.vue";
 import ActionSelectionButton from "@/components/ActionSelectionButton.vue";
-import IconHouse from "@/components/icons/IconHouse.vue";
+import IconFlag from "@/components/icons/IconFlag.vue";
+import GameService from "@/services/gameService";
+
+const gameService = new GameService();
 </script>
 
 <template>
   <div>
-    <RouterLink to="/" class="home">
-      <IconHouse />
-    </RouterLink>
+    <a v-if="gameService.isGameMastersTurn()" href="/" class="home">
+      <IconFlag />
+    </a>
     <ActionSelectionButton />
     <TurnButton />
     <TurnAction />

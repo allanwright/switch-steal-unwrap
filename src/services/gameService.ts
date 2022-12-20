@@ -135,9 +135,7 @@ export default class GameService {
       actionIndex = this._gameStore.actions.indexOf(this._gameStore.nextAction);
       this._gameStore.nextAction = undefined;
     } else {
-      actionIndex = Math.round(
-        Math.random() * this._gameStore.actions.length + 1
-      );
+      actionIndex = Math.floor(Math.random() * this._gameStore.actions.length);
     }
 
     this._gameStore.currentAction = this._gameStore.actions[actionIndex];

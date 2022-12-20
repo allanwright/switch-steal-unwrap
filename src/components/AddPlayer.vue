@@ -40,6 +40,7 @@ input {
   border-style: none;
   font-size: 16px;
   text-indent: 10px;
+  width: 200px;
 }
 
 input:focus {
@@ -52,5 +53,6 @@ input:focus {
   display: inline-block;
   line-height: 35px;
   padding: 0 10px 0 10px;
+  width: 100px;
 }
 </style>

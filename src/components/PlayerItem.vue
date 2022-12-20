@@ -30,7 +30,7 @@ li {
   margin: 5px auto 5px auto;
   padding: 5px 0 5px 0;
   text-transform: capitalize;
-  width: 295px;
+  width: 300px;
 }
 
 svg {

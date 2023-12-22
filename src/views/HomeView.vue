@@ -6,7 +6,12 @@ import PlayerService from "@/services/playerService";
 const gameService = new GameService();
 const playerService = new PlayerService();
 const setup = function () {
-  gameService.setupGame(playerService.getPlayers());
+  const params = new URLSearchParams(window.location.search);
+  var gameMasterCount = params.get('gamemasters');
+  if (!gameMasterCount) {
+    gameMasterCount = '1';
+  }
+  gameService.setupGame(playerService.getPlayers(), Number(gameMasterCount));
 };
 </script>
 

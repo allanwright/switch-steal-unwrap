@@ -67,9 +67,13 @@ export default class GameService {
    * Sorts players and sets up initial game state.
    * @param unsortedPlayers An unsorted list of players.
    */
-  setupGame(unsortedPlayers: Player[]) {
+  setupGame(unsortedPlayers: Player[], gameMasterCount: number) {
     const players = [...unsortedPlayers];
-    const gameMaster = players.splice(0, 1)[0];
+    const gameMasters = players.splice(0, gameMasterCount);
+
+    if (gameMasters.length > 1) {
+      gameMasters.reverse();
+    }
 
     let currentIndex = players.length;
     let randomIndex = 0;
@@ -84,10 +88,10 @@ export default class GameService {
       ];
     }
 
-    players.push(gameMaster);
+    players.push(...gameMasters);
     this._gameStore.players = players;
     this._gameStore.nextPlayer = players[0];
-    this._gameStore.gameMaster = gameMaster;
+    this._gameStore.gameMasters = gameMasters;
   }
 
   /**
@@ -107,7 +111,7 @@ export default class GameService {
    * @returns True if it is the game master's turn, otherwise false.
    */
   isGameMastersTurn() {
-    return this._gameStore.gameMaster?.id === this._gameStore.nextPlayer?.id;
+    return this._gameStore.gameMasters?.some(i => i.id === this._gameStore.nextPlayer?.id);
   }
 
   /**

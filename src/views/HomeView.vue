@@ -7,11 +7,8 @@ const gameService = new GameService();
 const playerService = new PlayerService();
 const setup = function () {
   const params = new URLSearchParams(window.location.search);
-  var gameMasterCount = params.get('gamemasters');
-  if (!gameMasterCount) {
-    gameMasterCount = '1';
-  }
-  gameService.setupGame(playerService.getPlayers(), Number(gameMasterCount));
+  var gameMasters = params.getAll('gamemasters[]');
+  gameService.setupGame(playerService.getPlayers(), gameMasters);
 };
 </script>
 

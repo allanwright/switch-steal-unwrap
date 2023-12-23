@@ -66,14 +66,18 @@ export default class GameService {
   /**
    * Sorts players and sets up initial game state.
    * @param unsortedPlayers An unsorted list of players.
+   * @param gameMasterNames The names of the game masters.
    */
-  setupGame(unsortedPlayers: Player[], gameMasterCount: number) {
+  setupGame(unsortedPlayers: Player[], gameMasterNames: Array<string>) {
     const players = [...unsortedPlayers];
-    const gameMasters = players.splice(0, gameMasterCount);
+    const gameMasters = players.filter(p => gameMasterNames.includes(p.name));
 
-    if (gameMasters.length > 1) {
-      gameMasters.reverse();
-    }
+    gameMasters.forEach(g => {
+      const index = players.findIndex(p => p.name === g.name);
+      if (index !== -1) {
+        players.splice(index, 1);
+      }
+    });
 
     let currentIndex = players.length;
     let randomIndex = 0;

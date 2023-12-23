@@ -7,7 +7,7 @@
       "sizes": "512x512"
    }
   ],
-  "start_url": "/",
+  "start_url": "/?gamemasters[]=elon&gamemasters[]=allan",
   "display": "standalone",
   "id": "switch-steal-unwrap"
 }

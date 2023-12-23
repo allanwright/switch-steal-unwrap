@@ -7,7 +7,8 @@ const gameService = new GameService();
 const playerService = new PlayerService();
 const setup = function () {
   const params = new URLSearchParams(window.location.search);
-  var gameMasters = params.getAll('gamemasters[]');
+  const gameMastersParam = params.get('gamecode') ?? '';
+  const gameMasters = atob(decodeURIComponent(gameMastersParam)).split(',');
   gameService.setupGame(playerService.getPlayers(), gameMasters);
 };
 </script>

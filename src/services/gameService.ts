@@ -70,10 +70,10 @@ export default class GameService {
    */
   setupGame(unsortedPlayers: Player[], gameMasterNames: Array<string>) {
     const players = [...unsortedPlayers];
-    const gameMasters = players.filter(p => gameMasterNames.includes(p.name));
+    const gameMasters = players.filter(p => gameMasterNames.includes(p.name.toLowerCase()));
 
     gameMasters.forEach(g => {
-      const index = players.findIndex(p => p.name === g.name);
+      const index = players.findIndex(p => p.name.toLowerCase() === g.name.toLowerCase());
       if (index !== -1) {
         players.splice(index, 1);
       }
